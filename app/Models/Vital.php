@@ -15,4 +15,7 @@ class Vital extends Model
         "weight",
         "bmi"
     ];
+    public function patient() {
+        return $this->belongsTo(Patient::class);
+    }
 }

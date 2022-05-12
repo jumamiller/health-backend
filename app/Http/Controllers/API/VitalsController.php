@@ -12,11 +12,23 @@ class VitalsController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\JsonResponse
      */
     public function index()
     {
-        //
+        try {
+            $vitals=Vital::paginate();
+            return response()->json([
+                'success' =>true,
+                'message' =>'You have successfully retrieved list of visits',
+                'data'  => $vitals
+            ]);
+        }catch (Exception $e){
+            return response()->json([
+                'success' =>false,
+                'message' =>$e->getMessage()
+            ]);
+        }
     }
 
     /**

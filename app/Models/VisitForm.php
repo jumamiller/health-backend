@@ -15,4 +15,7 @@ class VisitForm extends Model
         "is_on_drugs",
         "comments"
     ];
+    public function patient() {
+        return $this->belongsTo(Patient::class);
+    }
 }

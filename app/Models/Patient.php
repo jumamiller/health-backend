@@ -16,4 +16,10 @@ class Patient extends Model
         "dob",
         "gender"
     ];
+    public function vitals() {
+        return $this->hasMany(Vital::class);
+    }
+    public function visit_forms() {
+        return $this->hasMany(VisitForm::class);
+    }
 }
