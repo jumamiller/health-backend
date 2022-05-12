@@ -15,6 +15,11 @@ return new class extends Migration
     {
         Schema::create('vitals', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('patient_id')->constrained();
+            $table->string('visit_date');
+            $table->float('height');
+            $table->float('weight');
+            $table->integer('bmi');
             $table->timestamps();
         });
     }

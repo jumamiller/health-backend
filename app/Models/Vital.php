@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Vital extends Model
 {
     use HasFactory;
+    protected $fillable=[
+        'patient_id',
+        "visit_date",
+        "height",
+        "weight",
+        "bmi"
+    ];
 }
