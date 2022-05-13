@@ -41,7 +41,7 @@ class VisitFormsController extends Controller
     {
         try{
             VisitForm::create([
-                "patient_id" =>$request->input("patient_id"),
+                "patient_id" =>$request->input("patientID"),
                 "diet_general_health"    =>$request->input("dietGeneralHealth"),
                 "drugs_general_health"    =>$request->input("drugsGeneralHealth"),
                 "drugs_visit_date"    =>$request->input("drugsVisitDate"),

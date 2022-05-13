@@ -20,10 +20,10 @@ return new class extends Migration
             $table->string('drugs_visit_date')->nullable();
             $table->string('drugs_general_health')->nullable();
             $table->string('diet_general_health')->nullable();
-            $table->boolean('is_on_diet_to_lose_weight');
-            $table->boolean('is_on_drugs');
-            $table->text('diet_comments');
-            $table->text('drugs_comments');
+            $table->boolean('is_on_diet_to_lose_weight')->default(false);
+            $table->boolean('is_on_drugs')->default(false);
+            $table->text('diet_comments')->nullable();
+            $table->text('drugs_comments')->nullable();
             $table->timestamps();
         });
     }
