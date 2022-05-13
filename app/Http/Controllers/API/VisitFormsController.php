@@ -47,8 +47,8 @@ class VisitFormsController extends Controller
                 "dietVisitDate"    =>$request->input("dietVisitDate"),
                 "is_on_diet_to_lose_weight" =>$request->input("is_on_diet_to_lose_weight"),
                 "is_on_drugs"   =>$request->input("is_on_drugs"),
-                "drugsComments" =>$request->input("drugsComments"),
-                "dietComments" =>$request->input("dietComments"),
+                "drugs_comments" =>$request->input("drugsComments"),
+                "diet_comments" =>$request->input("dietComments"),
             ]);
             return response()->json([
                 'success' =>true,

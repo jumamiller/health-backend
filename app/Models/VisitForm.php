@@ -13,7 +13,8 @@ class VisitForm extends Model
         "general_health",
         "is_on_diet_to_lose_weight",
         "is_on_drugs",
-        "comments"
+        "drugs_comments",
+        "diet_comments"
     ];
     public function patient() {
         return $this->belongsTo(Patient::class);

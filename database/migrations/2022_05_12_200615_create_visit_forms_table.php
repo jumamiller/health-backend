@@ -19,8 +19,8 @@ return new class extends Migration
             $table->string('general_health');
             $table->boolean('is_on_diet_to_lose_weight');
             $table->boolean('is_on_drugs');
-            $table->text('dietComments');
-            $table->text('drugsComments');
+            $table->text('diet_comments');
+            $table->text('drugs_comments');
             $table->timestamps();
         });
     }
