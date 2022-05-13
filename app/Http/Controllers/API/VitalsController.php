@@ -41,11 +41,11 @@ class VitalsController extends Controller
     {
         try{
             Vital::create([
-                "patient_id" =>$request->input("patient_id"),
-                "visit_date"    =>$request->input("visit_date"),
+                "patient_id" =>$request->input("patientID"),
+                "visit_date" =>$request->input("visitDate"),
                 "height" =>$request->input("height"),
                 "weight"   =>$request->input("weight"),
-                "bmi" =>$request->input("bmi"),
+                "bmi" =>$request->input("BMI"),
             ]);
             return response()->json([
                 'success' =>true,

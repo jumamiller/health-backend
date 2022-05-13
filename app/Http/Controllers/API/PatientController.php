@@ -42,7 +42,7 @@ class PatientController extends Controller
     public function store(Request $request)
     {
         try{
-            Patient::create([
+            $patient=Patient::create([
                 "registration_date" =>$request->input("registrationDate"),
                 "first_name"    =>$request->input("firstName"),
                 "last_name" =>$request->input("lastName"),
@@ -52,7 +52,8 @@ class PatientController extends Controller
             ]);
             return response()->json([
                 'success' =>true,
-                'message' =>'You have successfully created a patient account'
+                'message' =>'You have successfully created a patient account',
+                'data' =>$patient
             ]);
         }catch (Exception $e){
             return response()->json([
