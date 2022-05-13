@@ -16,6 +16,8 @@ return new class extends Migration
         Schema::create('visit_forms', function (Blueprint $table) {
             $table->id();
             $table->foreignId('patient_id')->constrained();
+            $table->string('diet_visit_date')->nullable();
+            $table->string('drugs_visit_date')->nullable();
             $table->string('general_health');
             $table->boolean('is_on_diet_to_lose_weight');
             $table->boolean('is_on_drugs');
