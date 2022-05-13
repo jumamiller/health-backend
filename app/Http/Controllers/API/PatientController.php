@@ -47,6 +47,7 @@ class PatientController extends Controller
                 "first_name"    =>$request->input("first_name"),
                 "last_name" =>$request->input("last_name"),
                 "dob"   =>$request->input("dob"),
+                "patient_number"   =>$request->input("patient_number"),
                 "gender" =>$request->input("gender"),
             ]);
             return response()->json([

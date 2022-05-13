@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('visit_date');
             $table->float('height');
             $table->float('weight');
-            $table->integer('bmi');
+            $table->float('bmi');
             $table->timestamps();
         });
     }
