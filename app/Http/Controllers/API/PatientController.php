@@ -43,11 +43,11 @@ class PatientController extends Controller
     {
         try{
             Patient::create([
-                "registration_date" =>$request->input("registration_date"),
-                "first_name"    =>$request->input("first_name"),
-                "last_name" =>$request->input("last_name"),
-                "dob"   =>$request->input("dob"),
-                "patient_number"   =>$request->input("patient_number"),
+                "registration_date" =>$request->input("registrationDate"),
+                "first_name"    =>$request->input("firstName"),
+                "last_name" =>$request->input("lastName"),
+                "dob"   =>$request->input("dateOfBirth"),
+                "patient_number"   =>$request->input("patientID"),
                 "gender" =>$request->input("gender"),
             ]);
             return response()->json([
