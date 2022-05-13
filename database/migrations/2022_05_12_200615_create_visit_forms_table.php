@@ -18,7 +18,8 @@ return new class extends Migration
             $table->foreignId('patient_id')->constrained();
             $table->string('diet_visit_date')->nullable();
             $table->string('drugs_visit_date')->nullable();
-            $table->string('general_health');
+            $table->string('drugs_general_health')->nullable();
+            $table->string('diet_general_health')->nullable();
             $table->boolean('is_on_diet_to_lose_weight');
             $table->boolean('is_on_drugs');
             $table->text('diet_comments');
